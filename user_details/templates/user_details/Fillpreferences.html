@@ -1,0 +1,55 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Fill Preferences</title>
+    {% endblock %}
+    
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'css/fillpreferences.css' %}"/>
+    {% endblock %}
+
+    {% block content %}
+
+    <div class="container-fluid heading text-center">
+        <h1>Fill your preferences</h1>
+
+
+<br><br><br>
+
+
+<form action="{% url 'USER_DETAILS:userpreferences' %}" method="post">
+    
+    {% csrf_token %}
+     
+    <div class="subject-info-box-1">
+  
+  {{PreferForm.college_choices}}  
+
+
+</div>
+
+<div class="subject-info-arrows text-center">
+  <input type='button' id='btnRight' value='>' class="btn btn-primary" /><br />
+  <input type='button' id='btnLeft' value='<' class="btn btn-primary" />
+</div>
+
+<div class="subject-info-box-2">
+  
+        {{PreferForm.college_selected}}
+
+
+</div>
+
+<div class="clearfix"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js">
+        </script>
+<script src="{% static 'js/jquery.js' %}"></script>
+
+
+        </body>
+</html>
+
+
+     {% endblock %}

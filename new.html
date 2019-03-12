@@ -1,0 +1,40 @@
+<form action="#" method="post" id="demoForm" class="demoForm">
+    <fieldset>
+        <legend>Demo: Get Selected Options</legend>
+    
+        <p>
+            <select name="demoSel[]" id="demoSel" size="4" multiple>
+                <option value="scroll">Scrolling Divs JavaScript</option>
+                <option value="tooltip">JavaScript Tooltips</option>
+                <option value="con_scroll">Continuous Scroller</option>
+            </select>
+            
+            <button type="button" onclick="func()">Move right</button>
+            
+            
+            <button type="button" onclick="func2()">Move left</button>
+            
+            
+            <input type="submit" value="Submit" />
+            <textarea name="display" id="display" placeholder="view select list value(s) onchange" cols="20" rows="4" readonly></textarea>
+        </p>
+        
+    </fieldset>
+</form>
+
+<p id="demo"></p>
+
+<script>
+            
+        function func(){
+        var x=document.getElementById('demoSel').selectedIndex;
+       
+            document.getElementsByTagName("option")[x].style.visibility="hidden";
+            document.getElementById('display').innerHTML+=document.getElementsByTagName("option")[x].value + "\n";
+    }  
+    
+    function func2(){
+        
+    }
+    
+</script>
