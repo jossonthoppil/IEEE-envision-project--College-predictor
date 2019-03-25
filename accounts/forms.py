@@ -16,7 +16,7 @@ class SignupForm(UserCreationForm):
 			'email'
 		)
 		widgets={
-			'username':forms.fields.TextInput(attrs={'autofocus':'autofocus','placeholder':'Enter Username'}),
+			'username':forms.fields.TextInput(attrs={'autofocus':'autofocus','placeholder':'Enter Username'})
 		}
 
 	def __init__(self, *args, **kwargs):

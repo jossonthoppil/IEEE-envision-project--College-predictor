@@ -10,10 +10,28 @@
     {% endblock %}
    
     {% block content %} 
-<br><br><br><br>
-        <div class="container-fluid padding">
+
+
+<style>
+
+    .box h1{
+        background-color: #ce6903;
+        position: relative;
+        top: 75px;
+    }
+    .box2{
+        position: relative;
+        top: 100px;
+    }
+    .btn{
+        position: relative;
+        top: 100px;
+    }
+</style>
+
+        <div class="container-fluid padding box">
             <h1>Predict your Future Alma matter</h1>
-        <div class="row text-center">
+        <div class="row text-center box2">
             <div class="col-lg-4">
             <img src="{% static 'images/fillprofile.png' %}">
                 <h3 class="icon">Step I</h3>

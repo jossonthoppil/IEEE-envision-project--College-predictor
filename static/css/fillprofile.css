@@ -73,6 +73,11 @@ h1{
     cursor: pointer;
 }
 
+.detailbox input[type="radio"]{
+    list-style-type: none;
+    display: inline;
+}
+
 .btn{
     position: relative;
     top: 120px;

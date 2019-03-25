@@ -83,3 +83,21 @@ h1{
         margin-bottom: 5px;
     }
 
+.proper{
+              height: 250px;
+              width: 90%;
+    }
+          
+.box{
+              position: absolute;
+              top:25%;
+    }
+.box2{
+              position: absolute;
+              top: 5%;
+     }
+ .btn{
+              padding: 10px 45px;
+ }
+
+ 

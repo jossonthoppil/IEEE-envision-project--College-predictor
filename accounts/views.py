@@ -10,6 +10,7 @@ from django.contrib.auth import update_session_auth_hash
 # Create your views here.
 
 def login_view(request):
+	msg=""
 	if request.method=='POST':
 		form=LoginForm(data=request.POST)
 		if form.is_valid():
@@ -19,9 +20,11 @@ def login_view(request):
 				return redirect(request.POST.get('next'))
 			else:
 				return redirect('USER_DETAILS:userprofile')
+		else:
+			msg="LOGIN FAILED! TRY AGAIN"
 	else:
 		form=LoginForm()
-	return render(request,'accounts/login2.html',{'loginform':form})
+	return render(request,'accounts/login2.html',{'loginform':form,'msg':msg})
 
 def signup_view(request):
 	if request.method=='POST':
