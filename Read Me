@@ -1,0 +1,4 @@
+College Predictor-
+Done as a part of IEEE envision using django for backend and HTML,CSS,Javascript for frontend serving the purpose
+of alloting the student the college of his choice based on his preference order and implementing the Gale-Shapely 
+Algorithm.
